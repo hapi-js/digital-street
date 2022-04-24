@@ -1,0 +1,14 @@
+{
+  "name": "digital-street",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hapi-js/digital-street.git",
+  "author": "cddsky <thinksite@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon bin/serve.js"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2"
+  }
+}
