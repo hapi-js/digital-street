@@ -1,7 +1,7 @@
 exports.plugin = new class {
   name = 'IndexRouter';
-  register(server) {
-    server.route([
+  async register(server) {
+    await server.route([
       ...require('./usersRouter'),
     ]);
   }

@@ -1,7 +1,5 @@
 const Hapi = require('@hapi/hapi');
 
-const router = require('../src/router');
-
 const init = async () => {
   const server = Hapi.server({
     port: 3000,
@@ -9,7 +7,8 @@ const init = async () => {
   });
 
   await server.register([
-    router,
+    require('../src/router'),
+    require('../src/plugin'),
   ]);
 
   await server.start();

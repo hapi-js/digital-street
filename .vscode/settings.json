@@ -1,4 +1,6 @@
 {
   "files.eol": "\n",
-  "eslint.alwaysShowStatus": true
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onType"
 }
