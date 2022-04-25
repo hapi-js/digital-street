@@ -1,3 +1,5 @@
+const getUsers = require('./getUsers');
+
 module.exports = [
-  require('./getUsers'),
+  new getUsers,
 ];

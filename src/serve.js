@@ -7,8 +7,9 @@ const init = async () => {
   });
 
   await server.register([
-    require('../src/router'),
-    require('../src/plugin'),
+    require('./router'),
+    require('./plugin'),
+    // require('./src/model'),
   ]);
 
   await server.start();

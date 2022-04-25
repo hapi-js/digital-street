@@ -2,5 +2,6 @@
   "files.eol": "\n",
   "eslint.alwaysShowStatus": true,
   "eslint.packageManager": "yarn",
-  "eslint.run": "onType"
+  "eslint.run": "onType",
+  "js/ts.implicitProjectConfig.experimentalDecorators": true
 }

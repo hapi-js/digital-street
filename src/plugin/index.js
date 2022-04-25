@@ -3,6 +3,7 @@ exports.plugin = new class {
   async register(server) {
     await server.register([
       require('./swaggerPlugin'),
+      // require('./dbPlugin'),
     ]);
   }
 }
