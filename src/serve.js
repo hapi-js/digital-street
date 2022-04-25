@@ -1,7 +1,7 @@
-const Hapi = require('@hapi/hapi');
-// const UsersController = require('./controller/UsersController');
 
-// console.log(Users.plugin.getUsers());
+import Hapi from '@hapi/hapi';
+
+import controller from './controller/index';
 
 const init = async () => {
   const server = Hapi.server({
@@ -9,20 +9,9 @@ const init = async () => {
     host: 'localhost',
   });
 
-  // await server.register([
-  //   UsersController,
-  //   // require('./router'),
-  //   // require('./plugin'),
-  //   // require('./src/model'),
-  // ]);
-
-  server.route({
-    path: '/users',
-    method: 'get',
-    handler() {
-      return { a: 1 };
-    },
-  });
+  await server.register([
+    ...controller,
+  ]);
 
   await server.start();
   console.log('Server running on %s', server.info.uri);
