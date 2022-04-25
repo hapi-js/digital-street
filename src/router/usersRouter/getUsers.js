@@ -8,7 +8,6 @@ function test() { }
 class UsersController {
   path = '/users';
   method = 'GET';
-
   // 文档配置
   options = {
     tags: ['api', 'users'],
