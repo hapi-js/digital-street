@@ -1,9 +1,4 @@
-exports.plugin = new class {
-  name = 'IndexPlugin';
-  async register(server) {
-    await server.register([
-      require('./swaggerPlugin'),
-      // require('./dbPlugin'),
-    ]);
-  }
-}
+import swaggerPlugin from './swaggerPlugin'
+export default [
+  swaggerPlugin
+]

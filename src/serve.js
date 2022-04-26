@@ -1,7 +1,10 @@
 
 import Hapi from '@hapi/hapi';
+import inert from '@hapi/inert';
+import vision from '@hapi/vision';
 
-import controller from './controller/index';
+import controller from './controller';
+import plugin from './plugin';
 
 const init = async () => {
   const server = Hapi.server({
@@ -10,7 +13,10 @@ const init = async () => {
   });
 
   await server.register([
+    inert,
+    vision,
     ...controller,
+    ...plugin,
   ]);
 
   await server.start();

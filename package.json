@@ -6,14 +6,12 @@
   "author": "cddsky <thinksite@qq.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./bin/main.js"
+    "start": "nodemon ./bin"
   },
   "dependencies": {
-    "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.9",
     "@babel/plugin-proposal-decorators": "^7.17.9",
     "@babel/plugin-transform-modules-commonjs": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
     "@babel/register": "^7.17.7",
     "@hapi/hapi": "^20.2.2",
     "@hapi/inert": "^6.0.5",
