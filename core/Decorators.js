@@ -21,17 +21,19 @@ export function Get(path, config = {}) {
   }
 }
 
-export function Plugin(register) {
+export function Plugin() {
   return function (target) {
     target.prototype.name = target.name;
-    target.prototype.register = register;
-    // target.prototype.register = async function (server) {
-    //   // await server.register([
-    //   //   {
-    //   //     plugin: require('hapi-swagger'),
-    //   //     options,
-    //   //   },
-    //   // ]);
-    // }
+    target.prototype.register = (server) => {
+      console.log(server.mongoose);
+    };
   }
 }
+
+// export function schema() {
+//   return function (target) {
+//     target.prototype.name = target.name;
+//     target.prototype.register = register;
+//     console.log(target);
+//   }
+// }

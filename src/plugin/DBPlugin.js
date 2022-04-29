@@ -1,19 +1,15 @@
+const mongoose = require('mongoose');
 import { Plugin } from '../../core/Decorators';
 
-@Plugin({
-  basePath: '/',
-  info: {
-    title: '数字化街道社区工作平台',
-    version: '1.0.0',
-  },
-  auth: false,
-  grouping: 'tags',
-  tags: [
-    { name: 'users', description: '用户管理' },
-  ],
+@Plugin(async (server) => {
+  const host = '127.0.0.1';
+  const port = 27017;
+  const dbname = 'digital-street';
+  await mongoose.connect(`mongodb://${host}:${port}/${dbname}`);
+  server.decorate('server', 'mongoose', mongoose);
 })
 class DBPlugin { }
 
 export default {
-  plugin: new SwaggerPlugin()
+  plugin: new DBPlugin()
 }

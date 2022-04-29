@@ -8,7 +8,7 @@ class UsersController {
     {
       tags: ['api', 'users'],
       description: '用户管理',
-      notes: 'My route notes',
+      notes: '用户管理',
       // 参数验证
       validate: {
         // headers,
@@ -34,8 +34,6 @@ class UsersController {
     return 100;
   }
 }
-
-function validator() { }
 
 export default {
   plugin: new UsersController(),

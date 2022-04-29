@@ -5,6 +5,7 @@ import vision from '@hapi/vision';
 
 import controller from './controller';
 import plugin from './plugin';
+import model from './model';
 
 const init = async () => {
   const server = Hapi.server({
@@ -17,6 +18,7 @@ const init = async () => {
     vision,
     ...controller,
     ...plugin,
+    ...model,
   ]);
 
   await server.start();

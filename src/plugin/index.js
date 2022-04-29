@@ -1,4 +1,6 @@
-import swaggerPlugin from './swaggerPlugin'
+import SwaggerPlugin from './SwaggerPlugin'
+import DBPlugin from './DBPlugin'
 export default [
-  swaggerPlugin
+  SwaggerPlugin,
+  // DBPlugin,
 ]
